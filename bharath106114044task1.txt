@@ -1,0 +1,40 @@
+<html>
+<head>
+<script>
+
+
+var safeColors = ['00','33','66','99','cc','ff'];
+function rand(){
+        return Math.floor(Math.random()*6);
+};
+function randomColor ()
+{
+var r =safeColors[rand()];
+var g =safeColors[rand()];
+var b =safeColors[rand()];
+return "#"+r+g+b;
+}
+
+
+function test()
+{
+document.getElementById("first").style.background=randomColor();
+
+document.getElementById("second").style.background=randomColor();
+}
+
+function randomColorfirst()
+{
+document.getElementById("first").style.background=randomColor();
+}
+</script>
+
+</head>
+
+<body onLoad="test();">
+<h2>Click</h2>
+<div id="first" style="float:left;width:20%;height:15%" onClick="randomColorsecond();"</div>
+<div id="second" style="float:left;width:20%;height:15%;margin-left:2%;" onClick="randomColorfirst();"</div>
+
+</body>
+</html>
